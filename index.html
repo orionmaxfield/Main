@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Orion Maxfield — Rest is not quitting</title>
+<meta name="description" content="For men who are doing everything right and still can't breathe. Writing and tools on late nights, futility, perfectionism, and dating — built on one idea: sit down before you climb.">
+<meta property="og:title" content="Orion Maxfield — Rest is not quitting">
+<meta property="og:description" content="For men who are doing everything right and still can't breathe. Writing and tools on late nights, futility, perfectionism, and dating — built on one idea: sit down before you climb.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1B332C">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231B332C'/%3E%3Ccircle cx='40' cy='26' r='14' fill='%23EEF3EC'/%3E%3Cellipse cx='30' cy='44' rx='20' ry='9' fill='%2314271F'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,300;0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,300;1,7..72,400&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light dark;
+  --serif:"Literata",Georgia,"Times New Roman",serif;
+  --sans:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --measure:38rem; --wrap:72rem;
+  --bg:#F4F5F1; --fg:#12201B; --muted:#4A5952; --rule:#C9D1CB;
+  --link:#225744; --btn:#12201B; --btn-fg:#F4F5F1; --field:#FFFFFF; --field-b:#9AA8A0;
+}
+.glare{--bg:#FFFFFF; --fg:#000000; --muted:#2B2B2B; --rule:#000000; --link:#000000;
+  --btn:#000000; --btn-fg:#FFFFFF; --field:#FFFFFF; --field-b:#000000;}
+.shade{--bg:#1B332C; --fg:#EEF3EC; --muted:#BFD0C4; --rule:#3E5D51; --link:#E4F0E7;
+  --btn:#EEF3EC; --btn-fg:#1B332C; --field:#22403A; --field-b:#6E8F82;}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#131916; --fg:#EEF1EC; --muted:#B0BDB4; --rule:#2F3A34; --link:#A5D3BD;
+    --btn:#EEF1EC; --btn-fg:#131916; --field:#1B2320; --field-b:#4E5E56;}
+  .glare{--bg:#000000; --fg:#FFFFFF; --muted:#D8D8D8; --rule:#FFFFFF; --link:#FFFFFF;
+    --btn:#FFFFFF; --btn-fg:#000000; --field:#111111; --field-b:#FFFFFF;}
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--serif);
+  font-size:1.1875rem;line-height:1.65;font-optical-sizing:auto;
+  -webkit-font-smoothing:antialiased;}
+.band{background:var(--bg);color:var(--fg)}
+.shade.band{background-image:
+  radial-gradient(60rem 30rem at 12% 8%, rgba(255,255,255,.07), transparent 62%),
+  radial-gradient(44rem 24rem at 88% 72%, rgba(255,255,255,.05), transparent 60%),
+  radial-gradient(30rem 18rem at 58% 42%, rgba(0,0,0,.20), transparent 66%);}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 clamp(1.25rem,5vw,3.5rem)}
+.measure{max-width:var(--measure)}
+a{color:var(--link);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.16em}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:0;padding:.6rem 1rem;background:var(--fg);color:var(--bg);z-index:9}
+.skip:focus{left:1rem;top:1rem}
+p{margin:0 0 1.25em}
+h1,h2,h3{font-weight:500;line-height:1.1;margin:0 0 .6em;letter-spacing:-.012em;text-wrap:balance}
+h1{font-size:clamp(2.3rem,6.5vw,4.6rem);line-height:1.02}
+h2{font-size:clamp(1.75rem,4vw,2.7rem);margin-top:0}
+h3{font-size:1.35rem}
+em{font-style:italic}
+.site-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;
+  gap:.6rem 1.5rem;padding:1.5rem 0 1.25rem}
+.brand{font-family:var(--serif);font-weight:500;font-size:1.15rem;text-decoration:none;color:var(--fg);letter-spacing:-.005em}
+.brand:hover{text-decoration:underline}
+nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.35rem 1.35rem}
+nav a{font-family:var(--sans);font-size:.95rem;text-decoration:none;color:var(--fg)}
+nav a:hover{text-decoration:underline}
+nav a[aria-current]{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.3em}
+/* hero moods */
+.hero{padding:clamp(3.5rem,9vw,7rem) 0 clamp(3.5rem,8vw,6rem)}
+.hero h1{max-width:18ch}
+.lede{font-size:clamp(1.2rem,2.1vw,1.45rem);line-height:1.5;max-width:34rem;margin-top:1.6rem}
+.cue{font-family:var(--sans);font-size:.9rem;color:var(--muted);margin-top:3rem;display:flex;align-items:center;gap:.6rem}
+.cue svg{width:1rem;height:1rem;flex:none}
+.sect{padding:clamp(3.5rem,8vw,6.5rem) 0}
+.sect h2{max-width:22ch}
+.btn{display:inline-block;font-family:var(--sans);font-weight:600;font-size:1rem;line-height:1.2;
+  padding:.95rem 1.4rem;background:var(--btn);color:var(--btn-fg);text-decoration:none;border:0;
+  border-radius:3px;cursor:pointer}
+.btn:hover{filter:brightness(.92);text-decoration:none}
+.btn-note{font-family:var(--sans);font-size:.9rem;color:var(--muted);margin:1rem 0 0}
+/* paths */
+.paths{list-style:none;margin:2.5rem 0 0;padding:0;display:grid;gap:0 3rem}
+@media (min-width:46rem){.paths{grid-template-columns:1fr 1fr}}
+.paths li{border-top:1px solid var(--rule);padding:1.4rem 0 1.6rem}
+.paths a{font-size:1.45rem;font-weight:500;line-height:1.2;text-decoration:none;color:var(--fg)}
+.paths a:hover{text-decoration:underline}
+.paths p{margin:.5rem 0 0;color:var(--muted);font-size:1.05rem;line-height:1.5}
+/* about strip */
+.strip{display:flex;gap:1.75rem;align-items:flex-start;flex-wrap:wrap}
+.portrait{width:7.5rem;height:7.5rem;object-fit:cover;border-radius:2px;flex:none;background:var(--rule)}
+.strip > div{flex:1 1 20rem}
+/* forms */
+.fields{display:flex;gap:.6rem;flex-wrap:wrap;margin:1.4rem 0 0;max-width:34rem}
+input,textarea{font:inherit;font-size:1rem;padding:.85rem 1rem;border:1px solid var(--field-b);
+  background:var(--field);color:var(--fg);border-radius:3px;width:100%}
+.fields input{flex:1 1 14rem}
+textarea{min-height:9rem;resize:vertical}
+.note{font-family:var(--sans);font-size:.88rem;color:var(--muted);margin:.8rem 0 0}
+.sr{position:absolute;left:-9999px}
+/* entries */
+.entries{margin:1.5rem 0 0;padding:0;list-style:none}
+.entries li{border-top:1px solid var(--rule);padding:1.4rem 0}
+.entry-title{font-size:1.45rem;font-weight:500;line-height:1.2;text-decoration:none;color:var(--fg)}
+.entry-title:hover{text-decoration:underline}
+.entry-dek{margin:.5rem 0 .4rem;color:var(--muted);font-size:1.05rem;line-height:1.5}
+.meta{font-family:var(--sans);font-size:.85rem;color:var(--muted)}
+.soon{color:var(--muted);font-style:italic}
+.path-head{margin-top:3.5rem}
+.path-head h2{font-size:1.9rem;margin-bottom:.3em}
+.path-head p{color:var(--muted);max-width:var(--measure)}
+/* article */
+article{max-width:var(--measure)}
+article h1{font-size:clamp(2.1rem,5vw,3.4rem)}
+.byline{font-family:var(--sans);font-size:.9rem;color:var(--muted);margin:1rem 0 2.5rem}
+.opener::first-letter{float:left;font-size:4.2em;line-height:.82;padding:.08em .1em 0 0;font-weight:500}
+article h2{font-size:1.6rem;margin:2.6rem 0 .7rem}
+blockquote{margin:2.2rem 0;padding:.2rem 0 .2rem 1.4rem;border-left:3px solid var(--fg);
+  font-size:1.35rem;line-height:1.4;font-style:italic}
+blockquote p{margin:0}
+.endmark{display:block;width:.9rem;height:.9rem;background:var(--fg);margin:2.5rem 0 0}
+/* exercise */
+.steps{counter-reset:s;list-style:none;padding:0;margin:1.5rem 0 0;max-width:var(--measure)}
+.steps li{counter-increment:s;position:relative;padding:0 0 1.4rem 3rem;border:0}
+.steps li::before{content:counter(s);position:absolute;left:0;top:.05em;font-family:var(--sans);
+  font-weight:600;font-size:1rem;width:2rem;height:2rem;border:1px solid var(--fg);border-radius:50%;
+  display:grid;place-items:center}
+.kind{max-width:34rem;margin:1.5rem 0 0}
+.kind label{display:block;font-family:var(--sans);font-size:.9rem;color:var(--muted);margin:.9rem 0 .35rem}
+.kind-out{margin-top:1.4rem;padding:1.2rem 1.4rem;border:1px solid var(--rule);border-radius:3px;display:none}
+.kind-out.show{display:block}
+.kind-out ol{margin:0;padding-left:1.3rem;font-size:1.2rem}
+.kind-out li{margin:.3rem 0}
+.row{display:flex;gap:.7rem;flex-wrap:wrap;align-items:center;margin-top:1.2rem}
+.linkish{background:none;border:0;padding:0;font:inherit;font-family:var(--sans);font-size:.95rem;
+  color:var(--link);text-decoration:underline;cursor:pointer}
+/* footer */
+footer{padding:2.5rem 0 3rem;border-top:1px solid var(--rule)}
+footer p{font-family:var(--sans);font-size:.9rem;color:var(--muted);max-width:44rem;margin:0 0 .6rem}
+footer a{color:var(--fg)}
+.two{display:grid;gap:2.5rem}
+@media (min-width:52rem){.two{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="band glare">
+  <div class="wrap">
+    <header class="site-head">
+      <a class="brand" href="index.html">Orion Maxfield</a>
+      <nav aria-label="Site"><ul><li><a href="start-here.html">Start here</a></li><li><a href="if-youre-here.html">If you're here</a></li><li><a href="writing.html">Writing</a></li><li><a href="about.html">About</a></li><li><a href="resources.html">Resources</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+    </header>
+  </div>
+</div>
+<main id="main">
+
+<div class="band glare">
+  <div class="wrap">
+    <section class="hero">
+      <h1>You've been climbing on empty.</h1>
+      <p class="lede">Up past midnight, back on the phone. The thing you swore you were done
+        with. Every rule kept and still not enough. A whole week without anyone asking how
+        you actually are.</p>
+      <p class="lede" style="margin-top:0">If you came here at the end of a night like that:
+        you're not the only one, and you're not the worst one. You're tired.</p>
+      <p class="cue"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v11M3.5 8.5 8 13l4.5-4.5"/></svg> It gets quieter below.</p>
+    </section>
+  </div>
+</div>
+
+<div class="band shade">
+  <div class="wrap">
+    <section class="sect">
+      <h2>Sit down for a minute.</h2>
+      <div class="measure">
+        <p>Everything you've ever read about this told you to climb harder. Get disciplined.
+          Fix the behavior. Try again Monday. You've done that. You've done it for years. It
+          isn't working, and not because you're weak. Because you're doing it on no water.</p>
+        <p>Here's the picture this whole site is built on. A man is climbing toward
+          everything he's ever wanted, and he hits a wall he can't get over. Off to the
+          side, in the first shade he's seen all day, someone is sitting under a tree.
+          Someone who has plainly made this climb himself. He doesn't tell the man to push
+          harder. He asks him to sit.</p>
+        <p>That's the whole idea. Not quitting. Sitting. Getting your breath back before you
+          decide anything. The men who make it up that mountain aren't the ones who never
+          stopped. They're the ones who learned when to.</p>
+        <p style="margin-top:2.2rem"><a class="btn" href="start-here.html">Start here: one exercise, ten minutes</a></p>
+        <p class="btn-note">Free. No email, no account. Just the first kind thing.</p>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div class="band">
+  <div class="wrap">
+    <section class="sect">
+      <h2>When you've caught your breath, you choose.</h2>
+      <p class="measure">Nobody here is going to tell you what your problem is. You already
+        know. Pick the room you want to walk into first.</p>
+      
+      <ul class="paths">
+        <li><a href="writing.html#late-nights">Late nights and the phone</a>
+          <p>Why the thing you keep going back to was never really about the thing.</p></li>
+        <li><a href="writing.html#futility">The empty feeling</a>
+          <p>Futility, drift, and the sense that nothing is asking anything of you.</p></li>
+        <li><a href="writing.html#rules">Keeping every rule</a>
+          <p>Perfectionism, scrupulosity, and a faith that stopped feeling like good news.</p></li>
+        <li><a href="writing.html#dating">Dating and worthiness</a>
+          <p>What it does to a man to decide he doesn't deserve to be chosen.</p></li>
+      </ul>
+    </section>
+
+    <section class="sect" style="padding-top:0">
+      <div class="strip">
+        <!-- Add your photo to the repo as portrait.jpg. Until then this space stays empty. -->
+        <img class="portrait" src="portrait.jpg" alt="Orion Maxfield" onerror="this.remove()">
+        <div class="measure">
+          <p>I'm Orion. I'm training as a clinical mental health counselor in Utah, after
+            years of crisis lines, a psychiatric unit, and nonprofit work. I write for men
+            who are doing everything right and still can't breathe.</p>
+          <p><a href="about.html">About me, and the mountain</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sect" style="padding-top:0">
+      
+      <h2>One short thing when it's up.</h2>
+      <p class="measure">I send new pieces and tools when I publish them. No schedule, no funnel, nothing for sale.</p>
+      <!-- WIRING THIS UP: create a free account with an email provider (Buttondown, Kit,
+           or MailerLite) and replace the action URL below with the one they give you. -->
+      <form class="fields" action="PASTE_YOUR_PROVIDER_FORM_URL_HERE" method="post">
+        <label class="sr" for="email">Email address</label>
+        <input id="email" type="email" name="email" placeholder="you@example.com" required>
+        <button class="btn" type="submit">Send me new pieces</button>
+      </form>
+      <p class="note">Unsubscribe any time. I don't share your address with anyone.</p>
+    </section>
+  </div>
+</div>
+</main>
+<div class="band">
+  <div class="wrap">
+    <footer>
+      <p>This site is writing, not therapy. I'm a clinical mental health counseling graduate
+        student in Utah, working under supervision, and I'm not accepting clients.
+        Nothing here replaces care from a licensed professional.</p>
+      <p>If tonight is bad, don't wait on a website. Call or text <strong>988</strong>
+        &mdash; someone answers right away. <a href="resources.html">More help here.</a></p>
+      <p>&copy; 2026 Orion Maxfield</p>
+    </footer>
+  </div>
+</div>
+</body>
+</html>
