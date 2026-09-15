@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Orion Maxfield — Rest is not quitting</title>
-<meta name="description" content="For men who are doing everything right and still can't breathe. Writing and tools on late nights, futility, perfectionism, and dating — built on one idea: sit down before you climb.">
+<meta name="description" content="Stop doing. Start becoming. You can't become who you're meant to be until you see who you already are.">
 <meta property="og:title" content="Orion Maxfield — Rest is not quitting">
-<meta property="og:description" content="For men who are doing everything right and still can't breathe. Writing and tools on late nights, futility, perfectionism, and dating — built on one idea: sit down before you climb.">
+<meta property="og:description" content="Stop doing. Start becoming. You can't become who you're meant to be until you see who you already are.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#1B332C">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231B332C'/%3E%3Ccircle cx='40' cy='26' r='14' fill='%23EEF3EC'/%3E%3Cellipse cx='30' cy='44' rx='20' ry='9' fill='%2314271F'/%3E%3C/svg%3E">
@@ -136,6 +136,36 @@ footer p{font-family:var(--sans);font-size:.9rem;color:var(--muted);max-width:44
 footer a{color:var(--fg)}
 .two{display:grid;gap:2.5rem}
 @media (min-width:52rem){.two{grid-template-columns:1fr 1fr}}
+
+/* MP1 — six-block scroll (homepage only).
+   Rhythm rule: one line of truth at a time; short blocks, generous space;
+   the form should feel like the climb — a step, then a step. */
+.mp-hero{display:flex;flex-direction:column;justify-content:center;
+  min-height:calc(100svh - 5.5rem);padding:2rem 0 4rem}
+.mp-hero h1{max-width:12ch;font-size:clamp(2.8rem,8.5vw,5.4rem)}
+.mp-hero .lede{margin-top:1.8rem}
+.mp-block{padding:clamp(4rem,10vw,7rem) 0}
+.mp-breath{font-style:italic;font-size:clamp(1.25rem,2vw,1.5rem);line-height:1.45;
+  max-width:30rem;margin:0 0 2rem}
+.mp-beat{width:2.2rem;height:3px;background:var(--fg);border:0;margin:3rem 0}
+.mp-turn{font-size:clamp(1.5rem,2.6vw,1.9rem);font-weight:500;line-height:1.25;
+  max-width:28rem;margin:0 0 .7rem;letter-spacing:-.01em}
+.mp-turn-after{font-size:1.15rem;color:var(--muted);margin:0}
+.mp-step{font-size:clamp(1.2rem,2vw,1.45rem);line-height:1.5;max-width:32rem;margin:0 0 2rem}
+.mp-step:last-child{margin-bottom:0}
+.mp-aside{font-family:var(--sans);font-size:.95rem;line-height:1.6;color:var(--muted);
+  max-width:28rem;border-left:3px solid var(--fg);padding-left:1.1rem;margin:0 0 2rem}
+.mp-label{font-family:var(--sans);font-size:.85rem;font-weight:600;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);margin:0 0 1.6rem}
+.mp-echo{font-size:clamp(2rem,5.5vw,3.4rem);font-weight:500;line-height:1.05;
+  letter-spacing:-.012em;margin:0}
+@media (max-width:46rem){
+  .mp-hero{min-height:calc(100svh - 8.5rem)}
+  .mp-block{min-height:86svh;display:grid;align-content:center}
+}
+@media print{
+  .mp-hero,.mp-block{min-height:0}
+}
 </style>
 </head>
 <body>
@@ -150,87 +180,104 @@ footer a{color:var(--fg)}
 </div>
 <main id="main">
 
+<!-- BLOCK 1 — hero. These two lines, and nothing else, fill the first screen. -->
 <div class="band glare">
   <div class="wrap">
-    <section class="hero">
-      <h1>You've been climbing on empty.</h1>
-      <p class="lede">Up past midnight, back on the phone. The thing you swore you were done
-        with. Every rule kept and still not enough. A whole week without anyone asking how
-        you actually are.</p>
-      <p class="lede" style="margin-top:0">If you came here at the end of a night like that:
-        you're not the only one, and you're not the worst one. You're tired.</p>
-      <p class="cue"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v11M3.5 8.5 8 13l4.5-4.5"/></svg> It gets quieter below.</p>
+    <section class="mp-hero">
+      <h1>Stop doing.<br>Start becoming.</h1>
+      <p class="lede">You can&rsquo;t become who you&rsquo;re meant to be until you
+        see who you already are.</p>
     </section>
   </div>
 </div>
 
-<div class="band shade">
-  <div class="wrap">
-    <section class="sect">
-      <h2>Sit down for a minute.</h2>
-      <div class="measure">
-        <p>Everything you've ever read about this told you to climb harder. Get disciplined.
-          Fix the behavior. Try again Monday. You've done that. You've done it for years. It
-          isn't working, and not because you're weak. Because you're doing it on no water.</p>
-        <p>Here's the picture this whole site is built on. A man is climbing toward
-          everything he's ever wanted, and he hits a wall he can't get over. Off to the
-          side, in the first shade he's seen all day, someone is sitting under a tree.
-          Someone who has plainly made this climb himself. He doesn't tell the man to push
-          harder. He asks him to sit.</p>
-        <p>That's the whole idea. Not quitting. Sitting. Getting your breath back before you
-          decide anything. The men who make it up that mountain aren't the ones who never
-          stopped. They're the ones who learned when to.</p>
-        <p style="margin-top:2.2rem"><a class="btn" href="start-here.html">Start here: one exercise, ten minutes</a></p>
-        <p class="btn-note">Free. No email, no account. Just the first kind thing.</p>
-      </div>
-    </section>
-  </div>
-</div>
-
+<!-- BLOCK 2 — the cognitions. Each line is its own breath. -->
 <div class="band">
   <div class="wrap">
-    <section class="sect">
-      <h2>When you've caught your breath, you choose.</h2>
-      <p class="measure">Nobody here is going to tell you what your problem is. You already
-        know. Pick the room you want to walk into first.</p>
-      
-      <ul class="paths">
-        <li><a href="writing.html#late-nights">Late nights and the phone</a>
-          <p>Why the thing you keep going back to was never really about the thing.</p></li>
-        <li><a href="writing.html#futility">The empty feeling</a>
-          <p>Futility, drift, and the sense that nothing is asking anything of you.</p></li>
-        <li><a href="writing.html#rules">Keeping every rule</a>
-          <p>Perfectionism, scrupulosity, and a faith that stopped feeling like good news.</p></li>
-        <li><a href="writing.html#dating">Dating and worthiness</a>
-          <p>What it does to a man to decide he doesn't deserve to be chosen.</p></li>
-      </ul>
+    <section class="mp-block" aria-label="The thoughts">
+      <p class="mp-breath">If I can just be consistent, everything will fall into place.</p>
+      <p class="mp-breath">If I can just figure this out, the rest will follow.</p>
+      <p class="mp-breath">If I can just get this one thing right, it&rsquo;ll finally click.</p>
+      <hr class="mp-beat" aria-hidden="true">
+      <p class="mp-turn">That&rsquo;s not becoming. That&rsquo;s earning.</p>
+      <p class="mp-turn-after">And it was never going to work.</p>
     </section>
+  </div>
+</div>
 
-    <section class="sect" style="padding-top:0">
-      <div class="strip">
-        <!-- Add your photo to the repo as portrait.jpg. Until then this space stays empty. -->
-        <img class="portrait" src="portrait.jpg" alt="Orion Maxfield" onerror="this.remove()">
-        <div class="measure">
-          <p>I'm Orion. I'm training as a clinical mental health counselor in Utah, after
-            years of crisis lines, a psychiatric unit, and nonprofit work. I write for men
-            who are doing everything right and still can't breathe.</p>
-          <p><a href="about.html">About me, and the mountain</a></p>
-        </div>
-      </div>
+<!-- BLOCK 3 — the guide, in the shade. See, stand, climb. No bio, no credentials. -->
+<div class="band shade">
+  <div class="wrap">
+    <section class="mp-block" aria-label="How this works">
+      <p class="mp-step">This is simpler than you&rsquo;ve been told. It doesn&rsquo;t
+        require anyone special. It&rsquo;s just how people grow.</p>
+      <p class="mp-step">You are good. Not &ldquo;good enough&rdquo; &mdash; good.
+        And that is enough to begin.</p>
+      <p class="mp-step">Before anything changes, you have to see yourself clearly,
+        with enough kindness that you can bear to look.</p>
+      <p class="mp-step">That footing is what you change from. And a man who changes
+        moves through the world differently.</p>
     </section>
+  </div>
+</div>
 
-    <section class="sect" style="padding-top:0">
-      
-      <h2>One short thing when it's up.</h2>
-      <p class="measure">I send new pieces and tools when I publish them. No schedule, no funnel, nothing for sale.</p>
-      <!-- WIRING THIS UP: create a free account with an email provider (Buttondown, Kit,
-           or MailerLite) and replace the action URL below with the one they give you. -->
+<!-- BLOCK 4 — the first step. Free. Never gate the first win. -->
+<div class="band">
+  <div class="wrap">
+    <section class="mp-block" aria-label="The first step">
+      <p class="mp-label">The first step</p>
+      <p class="mp-step">Stand in front of a mirror.</p>
+      <p class="mp-step">Name one to three things you genuinely love about yourself.
+        They don&rsquo;t have to be physical &mdash; though they can be. The work
+        is in having to search for them.</p>
+      <p class="mp-aside">One rule: love is not acceptance. &ldquo;I love that
+        I&rsquo;m overweight&rdquo; is acceptance, not love. Love finds what is
+        genuinely good and true.</p>
+      <p class="mp-step">That&rsquo;s the whole first step. It&rsquo;s free.
+        No email, no signup, no gate.</p>
+    </section>
+  </div>
+</div>
+
+<!-- BLOCK 5 — the call to action. Quiet and low-pressure. -->
+<div class="band">
+  <div class="wrap">
+    <section class="mp-block" style="padding-top:0" aria-label="Keep going">
+      <h2>Keep going.</h2>
+      <p class="measure">When you&rsquo;re ready for more than the mirror, there&rsquo;s
+        a printable worksheet that continues the exercise &mdash; one small step a day,
+        for a week. I&rsquo;ll send it to you.</p>
+      <!-- WIRING THIS UP: create a free account with an email provider (MailerLite,
+           Buttondown, or Kit) and replace the action URL below with the one they
+           give you. Until then, this form does not go anywhere. -->
       <form class="fields" action="PASTE_YOUR_PROVIDER_FORM_URL_HERE" method="post">
         <label class="sr" for="email">Email address</label>
         <input id="email" type="email" name="email" placeholder="you@example.com" required>
-        <button class="btn" type="submit">Send me new pieces</button>
+        <button class="btn" type="submit">Send me the worksheet</button>
       </form>
-      <p class="note">Unsubscribe any time. I don't share your address with anyone.</p>
+      <p class="note">No schedule, no funnel, nothing for sale. Unsubscribe any time.</p>
+    </section>
+  </div>
+</div>
+
+<!-- BLOCK 6 — the close. Same road, different man. Glare for doing, shade for becoming. -->
+<div class="band glare">
+  <div class="wrap">
+    <section class="mp-block" aria-label="What doing feels like">
+      <p class="mp-step">You&rsquo;ve been here before. You know what doing feels like.</p>
+      <p class="mp-step">Keep doing, and tomorrow stays what it is: grinding, earning,
+        waiting for a payoff that never comes.</p>
+    </section>
+  </div>
+</div>
+<div class="band shade">
+  <div class="wrap">
+    <section class="mp-block" aria-label="What becoming feels like">
+      <p class="mp-step">Start becoming, and tomorrow looks exactly the same &mdash;
+        same life, same struggles, same hard days &mdash; except you&rsquo;re walking
+        that road as a different man. The weight lands differently.</p>
+      <hr class="mp-beat" aria-hidden="true">
+      <p class="mp-echo">Stop doing.<br>Start becoming.</p>
     </section>
   </div>
 </div>
